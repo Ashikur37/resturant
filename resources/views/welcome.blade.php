@@ -91,11 +91,21 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">about</a></li>
                 <li><a href="#pricing">pricing</a></li>
-                <li><a href="#great-place-to-enjoy">beer</a></li>
-                <li><a href="#breakfast">bread</a></li>
+                <li><a href="#great-place-to-enjoy">Item</a></li>
+
                 <li><a href="#featured-dish">featured</a></li>
                 <li><a href="#reserve">reservation</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li>
+                    <form action="#" method="get">
+                        <div class="input-group" style="width:200px;padding-top:10px">
+                            <input type="text" name="search" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">Go!</button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.row -->
@@ -130,12 +140,13 @@
                 <div class="col-xs-12 col-sm-6 dis-table-cell">
                     <div class="section-content">
                         <h2 class="section-content-title">About us</h2>
-                        <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                        <p class="section-content-para" style="font-size:17px">
+                            Chef Irene Li co-founded Mei Mei with her two older siblings in 2012 as a food truck. "Mei Mei” means little sister in Mandarin Chinese and Mei Mei food is an expression of the Li sibling’s favorite childhood eating experiences as Chinese-American kids growing up in Boston.
+
+Mei Mei's unconventional dumpling combinations showcase our love for great New England ingredients along with a pursuit of what tastes delicious. We use pasture-raised meat that is sourced from the Northeast and work with small, independent family farms. We are able to source 70% of our produce from the Northeast across the year. Since 2018, Mei Mei has been an “Open Book” company, meaning they share their financial information with all staff, empowering them to think and act like managers regardless of their role or title.
+
                         </p>
-                        <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
-                        </p>
+
                     </div> <!-- /.section-content -->
                 </div>
             </div> <!-- /.row -->
@@ -810,7 +821,7 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="copyright text-center">
                     <p>
-                        &copy; Copyright, 2015 <a href="#">Your Website Link.</a> Theme by <a href="http://themewagon.com/"  target="_blank">ThemeWagon</a>
+                        &copy; Copyright, 2022
                     </p>
                 </div>
             </div>
