@@ -105,6 +105,14 @@
                         </div>
                     </form>
                 </li>
+                <li>
+                @guest
+
+                <a href="{{route('login')}}">Login</a>
+                    @else
+                    <a href="{{route('admin.dashboard')}}">Admin</a>
+                    @endguest
+                </li>
 
             </ul>
         </div><!-- /.navbar-collapse -->
