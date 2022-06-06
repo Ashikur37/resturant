@@ -5,8 +5,8 @@
         <nav class="float-left">
             <ul>
                 <li>
-                    <a href="https://www.creative-tim.com">
-                        Creative Tim
+                    <a href="#">
+                        Resturant Management System
                     </a>
                 </li>
                 <li>

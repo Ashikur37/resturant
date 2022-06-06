@@ -7,8 +7,8 @@
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            Creative Tim
+        <a href="#" class="simple-text logo-normal">
+            Resturant
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -19,6 +19,20 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+            <li class="{{Request:: is('admin/user') ? 'active' :''}} ">
+                <a class="nav-link" href="{{route('user.index')}}">
+                    <i class="material-icons">User</i>
+                    <p>User</p>
+                </a>
+            </li>
+            @if(auth()->user()->type == 0)
+            <li class="{{Request:: is('admin/staff') ? 'active' :''}} ">
+                <a class="nav-link" href="{{route('staff.index')}}">
+                    <i class="material-icons">Staff</i>
+                    <p>Staff</p>
+                </a>
+            </li>
+            @endif
             <li>
                 <form id="logout-form" method="post" action="{{route('logout')}}">
                     @csrf

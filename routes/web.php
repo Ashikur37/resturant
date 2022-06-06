@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\StaffController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
@@ -13,10 +15,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Admin Group Router
-Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth',], function () {
 
     Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('slider',SliderController::class);
+    Route::resource('staff',StaffController::class);
+    Route::resource('user',UserController::class);
+
+
     Route::resource('category', 'CategoryController');
     Route::resource('item', 'ItemController');
 });

@@ -109,8 +109,10 @@
                 @guest
 
                 <a href="{{route('login')}}">Login</a>
+                    @elseif(Auth::user()->type==2)
+                    <a href="#">{{auth()->user()->name}}</a>
                     @else
-                    <a href="{{route('admin.dashboard')}}">Admin</a>
+                    <a href="{{route('admin.dashboard')}}">{{auth()->user()->name}}</a>
                     @endguest
                 </li>
 
