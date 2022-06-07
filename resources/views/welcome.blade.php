@@ -111,10 +111,22 @@
                 <a href="{{route('login')}}">Login</a>
                     @elseif(Auth::user()->type==2)
                     <a href="#">{{auth()->user()->name}}</a>
+                    <form id="logout-form" method="post" action="{{route('logout')}}">
+                    @csrf
+                </form>
+
                     @else
                     <a href="{{route('admin.dashboard')}}">{{auth()->user()->name}}</a>
                     @endguest
                 </li>
+                @if(auth()->check())
+                <li>
+                    <a href="#"  onclick="document.getElementById('logout-form').submit()">
+
+Logout
+</a>
+</li>
+@endif
 
             </ul>
         </div><!-- /.navbar-collapse -->
