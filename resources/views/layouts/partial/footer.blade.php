@@ -6,7 +6,7 @@
             <ul>
                 <li>
                     <a href="#">
-                        Resturant Management System
+                        Restaurant Management System
                     </a>
                 </li>
                 <li>

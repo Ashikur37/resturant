@@ -8,7 +8,7 @@
   -->
     <div class="logo">
         <a href="#" class="simple-text logo-normal">
-            Resturant
+            Restaurant
         </a>
     </div>
     <div class="sidebar-wrapper">
