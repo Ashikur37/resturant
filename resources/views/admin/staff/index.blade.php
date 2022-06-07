@@ -10,7 +10,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <a class="btn btn-primary" href="{{ route('category.create') }}">Add New</a>
+                    <a class="btn btn-primary" href="{{ route('staff.create') }}">Add New</a>
                     @include('layouts.partial.msg')
 
                     <div class="card">
