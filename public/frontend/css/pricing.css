@@ -16,13 +16,12 @@
 }
 
 .pricing-filter-wrapper {
-	background-color: rgba(139, 195, 74, 0.74);
+	background-color: rgba(3, 99, 173, 0.74);
 	position: relative;
 }
 
 .section-header {
 	padding-left: 10px;
-	padding-top: 35px;
 }
 
 .pricing-title {

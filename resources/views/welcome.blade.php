@@ -90,8 +90,7 @@
         <div class="collapse navbar-collapse" id="Food-fair-toggle">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">about</a></li>
-                <li><a href="#pricing">pricing</a></li>
-                <li><a href="#great-place-to-enjoy">Item</a></li>
+                <li><a href="#great-place-to-enjoy">Item & Pricing</a></li>
 
                 <li><a href="#featured-dish">featured</a></li>
                 <li><a href="#reserve">reservation</a></li>
@@ -161,11 +160,12 @@ Logout
                 </div>
                 <div class="col-xs-12 col-sm-6 dis-table-cell">
                     <div class="section-content">
-                        <h2 class="section-content-title">About us</h2>
+                        <h2 class="section-content-title">
+                            <b>About us</b></h2>
                         <p class="section-content-para" style="font-size:17px">
                             Chef Irene Li co-founded Mei Mei with her two older siblings in 2012 as a food truck. "Mei Mei” means little sister in Mandarin Chinese and Mei Mei food is an expression of the Li sibling’s favorite childhood eating experiences as Chinese-American kids growing up in Boston.
 
-Mei Mei's unconventional dumpling combinations showcase our love for great New England ingredients along with a pursuit of what tastes delicious. We use pasture-raised meat that is sourced from the Northeast and work with small, independent family farms. We are able to source 70% of our produce from the Northeast across the year. Since 2018, Mei Mei has been an “Open Book” company, meaning they share their financial information with all staff, empowering them to think and act like managers regardless of their role or title.
+Mei Mei's unconventional dumpling combinations showcase our love for great New England ingredients along with a pursuit of what tastes delicious.
 
                         </p>
 
@@ -188,7 +188,7 @@ Mei Mei's unconventional dumpling combinations showcase our love for great New E
                             <div class="section-header">
                                 <h2 class="pricing-title">We Offer This Menu</h2>
                                 <ul id="filter-list" class="clearfix">
-                                    <li class="filter" data-filter="all">All</li>
+
                                      @foreach($categories as $category)
                                         <li class="filter" data-filter="#{{ $category->slug }}"> {{ $category->name }}
                                             <span class="badge">
@@ -203,7 +203,21 @@ Mei Mei's unconventional dumpling combinations showcase our love for great New E
                 </div>
             </div>
         </div>
+        <div class="menu-gallery" style="width: 100%; float:left;">
+                    <div class="flexslider-container">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <img src="{{asset('frontend/images/menu-gallery/IMG_20210826_200820.jpg')}}" />
+                                </li>
+                                <li>
+                                    <img src="{{asset('frontend/images/menu-gallery/img-20200822-180155-largejpg.jpg')}}" />
+                                </li>
 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -239,98 +253,18 @@ Mei Mei's unconventional dumpling combinations showcase our love for great New E
 </section>
 
 
-<!--== 8. Great Place to enjoy ==-->
-<section id="great-place-to-enjoy" class="great-place-to-enjoy">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/beer_black.png')}}">
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                    <h2 class="section-title">Great Place to enjoy</h2>
-                </div>
-                <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
 
-                </div>
-            </div> <!-- /.dis-table -->
-        </div> <!-- /.row -->
-    </div> <!-- /.wrapper -->
-</section> <!-- /#great-place-to-enjoy -->
 
 
 
 <!--==  9. Our Beer  ==-->
-<section id="beer" class="beer">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/beer_color.png')}}">
-    <div class="container-fluid">
-        <div class="row dis-table">
-            <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6 dis-table-cell">
-                <div class="section-content">
-                    <h2 class="section-content-title">Enjoy the meal</h2>
-                    <div class="section-description">
-                        <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                        </p>
-                        <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
-<!--== 10. Our Breakfast Menu ==-->
-<section id="breakfast" class="breakfast">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/bread_black.png')}}">
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                    <h2 class="section-title">Our Breakfast Menu</h2>
-                </div>
-                <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-
-                </div>
-            </div> <!-- /.dis-table -->
-        </div> <!-- /.row -->
-    </div> <!-- /.wrapper -->
-</section> <!-- /#breakfast -->
 
 
 
-<!--== 11. Our Bread ==-->
-<section id="bread" class="bread">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/bread_color.png')}}">
-    <div class="container-fluid">
-        <div class="row dis-table">
-            <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
 
-            </div>
-            <div class="col-xs-12 col-sm-6 dis-table-cell">
-                <div class="section-content">
-                    <h2 class="section-content-title">
-                        Our Bread
-                    </h2>
-                    <div class="section-description">
-                        <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
-                        </p>
-                        <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 
@@ -353,249 +287,331 @@ Mei Mei's unconventional dumpling combinations showcase our love for great New E
 </section> <!-- /#featured-dish -->
 
 
+<style>
+    .iwAsFO {
+    display: flex;
+    flex-flow: row wrap;
+    right: 0px;
+    left: 0px;
+    margin: 0.5em 0.4em 0px;
+    max-width: 100%;
+    flex-basis: auto;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 12%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 2px 4px 0px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.iwAsFO .wd-100 {
+    width: 100%;
+    position: relative;
+}
+.fYdZgi {
+    position: absolute;
+    top: 0.5rem;
+    z-index: 1;
+    left: 1.25rem;
+    font-size: 0.625rem;
+    color: rgb(255, 255, 255);
+}
+.eGgOlL {
+    min-width: 0px;
+    position: relative;
+    overflow: hidden;
+}
+.eGgOlL .img-cvr {
+    height: 8.4rem;
+    background-image: url(https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png);
+}
+.eGgOlL img {
+    max-width: 100%;
+    max-height: 450em;
+    border-radius: 3px 3px 0px 0px;
+}
+.eGgOlL .img-wrpr__img-txt {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 4.7em;
+    left: 0.5em;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.icon-image {
+    min-width: 0.3em;
+    min-height: 0.3em;
+    background-repeat: no-repeat;
+    display: block;
+}
 
 
+.efVKWF {
+    width: 3em;
+    height: 2em;
+    opacity: 0.5;
+    filter: blur(0.8em);
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.kpOVEp {
+    background-image: url(/images/shadow.svg);
+}
+.eGgOlL .img-wrpr__fav {
+    font-size: 5em;
+    position: absolute;
+    top: 0.14em;
+    right: 0.1em;
+}
+.eGgOlL .img-wrpr__typ {
+    font-size: 2em;
+    position: absolute;
+    top: 0.2em;
+    left: 0.2em;
+}
+.bJhCXX {
+    align-self: center;
+    position: absolute;
+    right: 0.5em;
+    bottom: 1em;
+}
+.bJhCXX .btn--cstmz {
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.92;
+    display: flex;
+    padding: 0.1rem 0.1rem 0.1rem 0.3rem;
+}
+.bJhCXX button {
+    font-size: 1em;
+    font-weight: 600;
+}
+.dPRFWH {
+    flex-basis: auto;
+    flex-wrap: wrap;
+    padding: 0.3em;
+    width: 100%;
+    margin-left: 0.2em;
+}
+.dPRFWH .itm-dsc__nm {
+    flex-basis: auto;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    margin-top: 0.4rem;
+}
+.dPRFWH .itm-dsc__dscrptn {
+    flex-basis: auto;
+    font-size: 1em;
+    color: rgb(102, 102, 102);
+    margin-top: 0.5em;
+    width: 90%;
+}
+.dPRFWH .itm-dsc__actn {
+    flex-basis: auto;
+    flex-flow: row nowrap;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 0.4em;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+.dPRFWH .itm-dsc__actn__sz {
+    flex-flow: column nowrap;
+}
+.dPRFWH .itm-dsc__actn__sz__nm {
+    width: 1.3rem;
+    height: 0.81rem;
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+    margin-bottom: 0.2rem;
+}
+.nQrgY {
+    position: absolute;
+}
+.dPRFWH .itm-dsc__actn__crst {
+    flex-flow: column nowrap;
+    margin-left: -3rem;
+}
+.dPRFWH .itm-dsc__actn__crst__nm {
+    width: 1.3rem;
+    height: 0.81rem;
+    font-size: 0.75rem;
+    color: rgb(102, 102, 102);
+    margin-bottom: 0.2rem;
+}
+.dPRFWH .itm-dsc__actn__addtcrt {
+    margin-right: 0.1rem;
+}
+.cdXtGq {
+    align-self: center;
+}
+.cdXtGq .btn--grn {
+    background-color: rgb(101, 171, 11);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(101, 171, 11);
+}
+.cdXtGq button {
+    padding: 0.433em 0.663em;
+}
+.cdXtGq button {
+    position: relative;
+    overflow: hidden;
+}
+.cdXtGq button {
+    border-radius: 3px;
+    outline: none;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+}
+    </style>
+
+@php
+$items=[
+    "Pizza"=>[
+        [
+           "image"=>"https://images.dominos.com.bd/american_fav_feast.png",
+           "name"=>"Pizza",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza2",
+        //  ],
+    ],
+    "Burger"=>[
+        [
+           "image"=>"frontend/img-20200822-180155-largejpg.jpg",
+           "name"=>"Burger",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Swarma"=>[
+        [
+           "image"=>"frontend/232a370bb98efcf66fc650af86a2098b.jpg",
+           "name"=>"Sawrma",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Soup"=>[
+        [
+           "image"=>"frontend/puree-soup-2160x3840-tomato-gnocchi-toast-herbs-678.jpg",
+           "name"=>"Soup",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Kabab"=>[
+        [
+           "image"=>"frontend/Chicken-Tikka.jpeg",
+           "name"=>"Pizza",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Salad"=>[
+        [
+           "image"=>"frontend/salad.jpg",
+           "name"=>"Pizza",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Beverage"=>[
+        [
+           "image"=>"frontend/images (12).jpeg",
+           "name"=>"Pizza",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+    "Chowmin"=>[
+        [
+           "image"=>"frontend/7c3bb3c4d6ce96074dee02046c669bdf.jpg",
+           "name"=>"Pizza",
+        ],
+        // [
+        //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
+        //     "name"=>"Pizza",
+        //  ],
+    ],
+]
+
+@endphp
 <!--== 13. Menu List ==-->
 <section id="menu-list" class="menu-list">
-    <div class="container">
+    <div class="container" style="width: 1450px">
         <div class="row menu">
             <div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2 col-xs-12">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="menu-catagory">
-                                <h2>Bread</h2>
+                    @foreach(["Pizza","Burger","Swarma","Soup","Kabab","Salad","Beverage","Chowmin"] as $name)
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="row" style="display: flex">
+                            <div class="menu-catagory" style="margin:auto">
+                                <h2>{{$name}}</h2>
                             </div>
                         </div>
+                        @foreach($items[$name] as $item)
                         <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">French Bread</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
+                            <div class="injectStyles-bxKuyf jvchdE" style="width: 90%;margin-left:5%;" data-label="American Favourite Feast">
+                                <div class="injectStyles-ghyFZI iwAsFO" id="container"><div class="wd-100">
+                                    <div class="MenuItemstyle__TagDiv-exaGSV fYdZgi"></div>
+                                    <div class="MenuItemstyle__ImageWrapperElem-brWeHV eGgOlL">
+                                        <div class="img-cvr"><div>
+                                            <img alt="American Favourite Feast" class="img-comp injectStyles-hqiIPi jdTQZw img-wrpr__img" loading="eager" style=""
+                                             src="{{$item["image"]}}"></div></div><span>
+                                                <i class="ImageCompstyle__Icon-kMKYiT kpOVEp icon-image injectStyles-hqiIPi kMTkUh"></i></span>
+                                                <div class="img-wrpr__shdw-prc"></div><div class="img-wrpr__img-txt"><span class="bdt">799</span></div>
+                                                <span><i class="ImageCompstyle__Icon-kMKYiT kpOVEp icon-image injectStyles-hqiIPi efVKWF"></i>
+                                                </span><div class="img-wrpr__fav" data-label="favorite"><span><i class="ImageCompstyle__Icon-kMKYiT kIMWMT icon-image injectStyles-hqiIPi jdTQZw"></i></span>
+                                                </div><div class="img-wrpr__typ"><span><i class="ImageCompstyle__Icon-kMKYiT ksXAIT icon-image injectStyles-hqiIPi AwDdF"></i>
+                                                </span></div><div class="injectStyles-ZfRWV bJhCXX"></div></div></div>
+                                                    <div class="MenuItemstyle__TextWrapperElement1-kRLdBR dPRFWH"><div class="itm-dsc__nm">{{$item["name"]}}</div>
+                                                    <div class="itm-dsc__dscrptn">Chicken sausage, Beef pepperoni come together with seasoned mushrooms and green chilli to deliver a spicy and meaty mouthfeel.</div>
+                                                    <div></div><div class="itm-dsc__actn"><div class="itm-dsc__actn__sz"><div class="itm-dsc__actn__sz__nm">Size</div><div><div class="injectStyles-ipKJhp nQrgY">
+                                                        <div class="itm-dsc__actn__sz__dd-ttl">
+                                                            <select class="form-control">
+                                                                <option value="">Quantity</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                                <option value="">4</option>
+                                                            </select>
+                                                        </div></div></div></div><div class="itm-dsc__actn__crst"><div class="itm-dsc__actn__crst__nm">Crust</div><div><div class="injectStyles-ipKJhp nQrgY">
+                                                            <div class="itm-dsc__actn__sz__dd-ttl"><span><i class="ImageCompstyle__Icon-kMKYiT gIwBxy icon-image injectStyles-hqiIPi jgpZSw">
+                                                                </i></span></div></div></div></div>
+                                                                <div class="itm-dsc__actn__addtcrt"><div class="injectStyles-ZfRWV cdXtGq"><button data-label="addTocart" class="btn--grn ripple"><span>ADD TO CART</span>
+                                                                </button></div><div class="itm-dsc__oos"><div></div></div></div></div></div></div></div>
+                                                                <br>
 
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$149.00</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Italian Bread</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
+                        @endforeach
 
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$149.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Regular Bread</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
 
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$149.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
+                    @endforeach
 
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="menu-catagory">
-                                <h2>Drinks</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Regular Tea</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$20.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Garlic Tea</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$30.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Black Coffee</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$40.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="menu-catagory">
-                                <h2>Meat</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Bacon</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$70.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Sausage</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Chicken Balls</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$90.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="row">
-                            <div class="menu-catagory">
-                                <h2>Special</h2>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Chicken Balls</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$90.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Bacon</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$70.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="menu-item">
-                                <h3 class="menu-title">Sausage</h3>
-                                <p class="menu-about">Astronomy compels the soul</p>
-
-                                <div class="menu-system">
-                                    <div class="half">
-                                        <p class="per-head">
-                                            <span><i class="fa fa-user"></i></span>1:1
-                                        </p>
-                                    </div>
-                                    <div class="half">
-                                        <p class="price">$50.00</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div id="moreMenuContent"></div>

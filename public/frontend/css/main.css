@@ -188,18 +188,18 @@ textarea.empty {
 ||				4. Navigation
 ==================================================*/
 .custom-navbar-default {
-    background-color: #8bc34a;
+    background-color: #0363ad;
     border: 0px;
     margin: 0px;
     border-radius: 0px;
-    color: #5c9233;
+    color: #0363ad;
     padding: 10px 0px;
     box-shadow: 0px 2px 7px #000; /*rgb(139, 195, 74)*/
 }
 
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:hover {
-    color: #5c9233;
+    color: #0363ad;
 }
 .navbar-default .navbar-nav > li > a {
     color: #000;
@@ -235,6 +235,7 @@ textarea.empty {
 .navbar-default .navbar-nav > .active > a:hover {
     background-color: transparent;
     color: #fff;
+    border-bottom: 2px solid aqua;
 }
 
 .navbar-brand {
@@ -243,8 +244,8 @@ textarea.empty {
 }
 
 .navbar-default .navbar-collapse {
-    border-color: #669d38;
-    background-color: #8bc34a;
+    border-color: #0363ad;
+    background-color: #0363ad;
 }
 
 /*-----------------------------------------------
@@ -356,7 +357,7 @@ nav.shrink .navbar-toggle {
 ||				6. About us
 ==================================================*/
 .about-bg {
-    background: url("../images/images (7).jpeg");
+    background: url("https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=600");
     background-repeat: no-repeat;
     background-size: 85%;
     background-position-x: 15%;
@@ -631,7 +632,7 @@ footer a:hover {
     }
 
     .section-content {
-        padding: 10% 40% 10% 12%;
+        padding: 10% 0% 10% 12%;
     }
 
     .bread .section-bg,
