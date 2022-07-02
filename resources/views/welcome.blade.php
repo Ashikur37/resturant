@@ -321,7 +321,7 @@ Mei Mei's unconventional dumpling combinations showcase our love for great New E
     overflow: hidden;
 }
 .eGgOlL .img-cvr {
-    height: 8.4rem;
+    height: 12.4rem;
     background-image: url(https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png);
 }
 .eGgOlL img {
