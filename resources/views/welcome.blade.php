@@ -519,7 +519,7 @@ $items=[
     "Kabab"=>[
         [
            "image"=>"frontend/Chicken-Tikka.jpeg",
-           "name"=>"Pizza",
+           "name"=>"Chicken Tikka",
         ],
         // [
         //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
@@ -529,7 +529,7 @@ $items=[
     "Salad"=>[
         [
            "image"=>"frontend/salad.jpg",
-           "name"=>"Pizza",
+           "name"=>"Salad",
         ],
         // [
         //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
@@ -539,7 +539,7 @@ $items=[
     "Beverage"=>[
         [
            "image"=>"frontend/images (12).jpeg",
-           "name"=>"Pizza",
+           "name"=>"Cold Drinks",
         ],
         // [
         //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
@@ -549,7 +549,7 @@ $items=[
     "Chowmin"=>[
         [
            "image"=>"frontend/7c3bb3c4d6ce96074dee02046c669bdf.jpg",
-           "name"=>"Pizza",
+           "name"=>"Chowmin",
         ],
         // [
         //     "image"=>"https://api.dominos.com.bd/olo-bg-prod-api/static/assets/placeholder.png",
@@ -588,8 +588,10 @@ $items=[
                                                 </div><div class="img-wrpr__typ"><span><i class="ImageCompstyle__Icon-kMKYiT ksXAIT icon-image injectStyles-hqiIPi AwDdF"></i>
                                                 </span></div><div class="injectStyles-ZfRWV bJhCXX"></div></div></div>
                                                     <div class="MenuItemstyle__TextWrapperElement1-kRLdBR dPRFWH"><div class="itm-dsc__nm">{{$item["name"]}}</div>
-                                                    <div class="itm-dsc__dscrptn">Chicken sausage, Beef pepperoni come together with seasoned mushrooms and green chilli to deliver a spicy and meaty mouthfeel.</div>
-                                                    <div></div><div class="itm-dsc__actn"><div class="itm-dsc__actn__sz"><div class="itm-dsc__actn__sz__nm">Size</div><div><div class="injectStyles-ipKJhp nQrgY">
+
+                                                    <div></div><div class="itm-dsc__actn"><div class="itm-dsc__actn__sz">
+                                                    <div>
+                                                        <div class="injectStyles-ipKJhp nQrgY">
                                                         <div class="itm-dsc__actn__sz__dd-ttl">
                                                             <select class="form-control">
                                                                 <option value="">Quantity</option>
