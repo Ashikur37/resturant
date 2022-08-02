@@ -25,6 +25,18 @@
                     <p>User</p>
                 </a>
             </li>
+            <li class="{{Request:: is('admin/category') ? 'active' :''}} ">
+                <a class="nav-link" href="{{route('category.index')}}">
+                    <i class="material-icons">Category</i>
+                    <p>Category</p>
+                </a>
+            </li>
+            <li class="{{Request:: is('admin/item') ? 'active' :''}} ">
+                <a class="nav-link" href="{{route('item.index')}}">
+                    <i class="material-icons">Item</i>
+                    <p>Item</p>
+                </a>
+            </li>
             @if(auth()->user()->type == 0)
             <li class="{{Request:: is('admin/staff') ? 'active' :''}} ">
                 <a class="nav-link" href="{{route('staff.index')}}">

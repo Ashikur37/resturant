@@ -44,7 +44,7 @@ class CategoryController extends Controller
 
         $category = new Category();
         $category->name = $request->name;
-        $category->slug = str_slug($request->name);
+        $category->slug = \Str::slug($request->name);
         $category->save();
         return redirect()->route('category.index')->with('successMsg','Categoey Successfully Added');
     }
@@ -88,7 +88,7 @@ class CategoryController extends Controller
         ]);
         $category = Category::find($id);
         $category->name = $request->name;
-        $category->slug = str_slug($request->name);
+        $category->slug = \Str::slug($request->name);
         $category->save();
         return redirect()->route('category.index')->with('successMsg','Category Successfully Updated');
     }

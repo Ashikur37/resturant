@@ -221,7 +221,7 @@ Logout
                 <div class="col-md-10 col-md-offset-1">
                     <ul id="menu-pricing" class="menu-price">
 
-                       @foreach($items as $item)
+                       @foreach([] as $item)
                             <li class="item dinner" id="{{ $item->category->slug }}">
 
                                 <a href="#">
@@ -548,14 +548,14 @@ $items=[
         <div class="row menu">
             <div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2 col-xs-12">
                 <div class="row">
-                    @foreach(["Pizza","Burger","Swarma","Soup","Kabab","Salad","Beverage","Chowmin"] as $name)
+                    @foreach($categories as $category)
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="row" style="display: flex">
                             <div class="menu-catagory" style="margin:auto">
-                                <h2>{{$name}}</h2>
+                                <h2>{{$category->name}}</h2>
                             </div>
                         </div>
-                        @foreach($items[$name] as $item)
+                        @foreach($category->items as $item)
                         <div class="row">
                             <div class="injectStyles-bxKuyf jvchdE" style="width: 90%;margin-left:5%;" data-label="American Favourite Feast">
                                 <div class="injectStyles-ghyFZI iwAsFO" id="container"><div class="wd-100">
@@ -563,14 +563,14 @@ $items=[
                                     <div class="MenuItemstyle__ImageWrapperElem-brWeHV eGgOlL">
                                         <div class="img-cvr"><div>
                                             <img alt="American Favourite Feast" class="img-comp injectStyles-hqiIPi jdTQZw img-wrpr__img" loading="eager" style=""
-                                             src="{{$item["image"]}}"></div></div><span>
+                                             src="{{asset('uploads/item/'.$item->image)}}"></div></div><span>
                                                 <i class="ImageCompstyle__Icon-kMKYiT kpOVEp icon-image injectStyles-hqiIPi kMTkUh"></i></span>
-                                                <div class="img-wrpr__shdw-prc"></div><div class="img-wrpr__img-txt"><span class="bdt">799</span></div>
+                                                <div class="img-wrpr__shdw-prc"></div><div class="img-wrpr__img-txt"><span class="bdt">৳{{$item->price}}</span></div>
                                                 <span><i class="ImageCompstyle__Icon-kMKYiT kpOVEp icon-image injectStyles-hqiIPi efVKWF"></i>
                                                 </span><div class="img-wrpr__fav" data-label="favorite"><span><i class="ImageCompstyle__Icon-kMKYiT kIMWMT icon-image injectStyles-hqiIPi jdTQZw"></i></span>
                                                 </div><div class="img-wrpr__typ"><span><i class="ImageCompstyle__Icon-kMKYiT ksXAIT icon-image injectStyles-hqiIPi AwDdF"></i>
                                                 </span></div><div class="injectStyles-ZfRWV bJhCXX"></div></div></div>
-                                                    <div class="MenuItemstyle__TextWrapperElement1-kRLdBR dPRFWH"><div class="itm-dsc__nm">{{$item["name"]}}</div>
+                                                    <div class="MenuItemstyle__TextWrapperElement1-kRLdBR dPRFWH"><div class="itm-dsc__nm">{{$item->name}}</div>
 
                                                     <div></div><div class="itm-dsc__actn"><div class="itm-dsc__actn__sz">
                                                     <div>
@@ -586,7 +586,7 @@ $items=[
                                                         </div></div></div></div><div class="itm-dsc__actn__crst"><div class="itm-dsc__actn__crst__nm">Crust</div><div><div class="injectStyles-ipKJhp nQrgY">
                                                             <div class="itm-dsc__actn__sz__dd-ttl"><span><i class="ImageCompstyle__Icon-kMKYiT gIwBxy icon-image injectStyles-hqiIPi jgpZSw">
                                                                 </i></span></div></div></div></div>
-                                                                <div class="itm-dsc__actn__addtcrt"><div class="injectStyles-ZfRWV cdXtGq"><button data-label="addTocart" class="btn--grn ripple"><span>ADD TO CART</span>
+                                                                <div class="itm-dsc__actn__addtcrt"><div class="injectStyles-ZfRWV cdXtGq"><button onclick="addToCart()" data-label="addTocart" class="btn--grn ripple"><span>ADD TO CART</span>
                                                                 </button></div><div class="itm-dsc__oos"><div></div></div></div></div></div></div></div>
                                                                 <br>
 
@@ -823,6 +823,10 @@ $items=[
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 <script id="">
+    function addToCart(){
+        //toastr show
+        toastr.success('Item added to cart successfully');
+    }
     $(function () {
         $('#datetimepicker1').datetimepicker({
             format: "dd MM yyyy - HH:11 P",

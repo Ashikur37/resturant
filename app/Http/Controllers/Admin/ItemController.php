@@ -48,7 +48,7 @@ class ItemController extends Controller
             'category' =>'required',
         ]);
         $image = $request->file('image');
-        $slug = str_slug($request->name);
+        $slug = \Str::slug($request->name);
         if(isset($image)){
 
             $currentdate = Carbon::now()->toDateString();
@@ -117,7 +117,7 @@ class ItemController extends Controller
         ]);
         $item =Item::find($id);
         $image = $request->file('image');
-        $slug = str_slug($request->name);
+        $slug = \Str::slug($request->name);
         if(isset($image)){
 
             $currentdate = Carbon::now()->toDateString();

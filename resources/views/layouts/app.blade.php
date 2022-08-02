@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <!-- Bootstrap core CSS     -->
-    <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet" />
     <!--  Material Dashboard CSS    -->
     <link href="{{ asset('backend/css/material-dashboard.css') }}" rel="stylesheet" />
     <!--  CSS for Demo Purpose, don't include it in your project     -->
@@ -25,6 +25,11 @@
 </head>
 <body>
 <div id="app">
+    <style>
+            table{
+                font-size: 19px;
+            }
+        </style>
     <div class="wrapper">
 
         @if(Request::is('admin*'))
@@ -48,17 +53,17 @@
 
 <!-- Scripts -->
 <!--   Core JS Files   -->
-<script src="{{ asset('backend/js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('backend/js/bootstrap.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('backend/js/material.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('backend/js/core/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('frontend/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.4.4/js/material.min.js"></script>
 <!--  Charts Plugin -->
-<script src="{{ asset('backend/js/chartist.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/chartist.min.js') }}"></script>
 <!--  Dynamic Elements plugin -->
-<script src="{{ asset('backend/js/arrive.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/arrive.min.js') }}"></script>
 <!--  PerfectScrollbar Library -->
-<script src="{{ asset('backend/js/perfect-scrollbar.jquery.min.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
 <!--  Notifications Plugin    -->
-<script src="{{ asset('backend/js/bootstrap-notify.js') }}"></script>
+<script src="{{ asset('backend/js/plugins/bootstrap-notify.js') }}"></script>
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Material Dashboard javascript methods -->

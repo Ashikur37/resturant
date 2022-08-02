@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\StaffController;
 use App\Http\Controllers\Admin\UserController;
@@ -23,8 +25,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth',], function () {
     Route::resource('user',UserController::class);
 
 
-    Route::resource('category', 'CategoryController');
-    Route::resource('item', 'ItemController');
+    Route::resource('category', CategoryController::class);
+    Route::resource('item', ItemController::class);
 });
 
 Auth::routes();
