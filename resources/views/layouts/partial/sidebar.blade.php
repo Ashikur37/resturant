@@ -37,6 +37,12 @@
                     <p>Item</p>
                 </a>
             </li>
+            <li class="{{Request:: is('admin/order') ? 'active' :''}} ">
+                <a class="nav-link" href="{{route('order.index')}}">
+                    <i class="material-icons">Order</i>
+                    <p>Order</p>
+                </a>
+            </li>
             @if(auth()->user()->type == 0)
             <li class="{{Request:: is('admin/staff') ? 'active' :''}} ">
                 <a class="nav-link" href="{{route('staff.index')}}">
