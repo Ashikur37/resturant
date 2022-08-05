@@ -7,7 +7,7 @@
       Tip 2: you can also add an image using data-image tag
   -->
     <div class="logo">
-        <a href="#" class="simple-text logo-normal">
+        <a href="{{URL::to('/')}}" class="simple-text logo-normal" target="_blank">
             Restaurant
         </a>
     </div>
