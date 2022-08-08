@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth',], function () {
     Route::resource('category', CategoryController::class);
     Route::resource('item', ItemController::class);
     Route::resource('order', OrderController::class);
+    //order status update
+    Route::get('order/{id}/status', [OrderController::class, 'status'])->name('order.status');
 
 });
 
@@ -41,6 +43,8 @@ Route::post("/add-to-cart",[App\Http\Controllers\HomeController::class, 'addToCa
 Route::get("/cart",[App\Http\Controllers\HomeController::class, 'cart'])->name('cart.index');
 Route::get("/cart/increment",[App\Http\Controllers\HomeController::class, 'cartIncrement'])->name('cart.increment');
 Route::get("/cart/decrement",[App\Http\Controllers\HomeController::class, 'cartDecrement'])->name('cart.decrement');
+//coupon
+Route::get("/coupon",[App\Http\Controllers\HomeController::class, 'coupon'])->name('coupon');
 
 //cart.destroy
 Route::delete("/cart/{id}",[App\Http\Controllers\HomeController::class, 'cartDestroy'])->name('cart.destroy');
@@ -48,3 +52,5 @@ Route::delete("/cart/{id}",[App\Http\Controllers\HomeController::class, 'cartDes
 Route::get("/checkout",[App\Http\Controllers\HomeController::class, 'checkout'])->name('checkout')->middleware('auth');
 //checkout.submit
 Route::post("/checkout/submit",[App\Http\Controllers\HomeController::class, 'checkoutSubmit'])->name('checkout.submit');
+//profile route
+Route::get("/profile",[App\Http\Controllers\HomeController::class, 'profile'])->name('profile')->middleware('auth');

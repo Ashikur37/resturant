@@ -67,6 +67,9 @@ class HomeController extends Controller
         $order=Order::create([
             "user_id"=>auth()->user()->id,
             "payment_method"=>$request->payment_method,
+            "area"=>$request->area,
+            "sender_number"=>$request->sender_number,
+            "trxid"=>$request->trxid,
             "shipping_address"=>$request->shipping_address,
             "total"=>\Cart::total()
         ]);
@@ -81,5 +84,20 @@ class HomeController extends Controller
         //cart clear
         \Cart::destroy();
         return view('order_success',compact('order'));
+    }
+    public function profile(){
+        return view('profile');
+    }
+    //coupon
+    public function coupon(Request $request){
+        if($request->code=="MK20")
+        {
+            \Cart::setGlobalDiscount(20);
+            return back()->with('success','Coupon applied successfully');
+        }
+        else{
+            return back()->with('error','Invalid Coupon');
+        }
+
     }
 }

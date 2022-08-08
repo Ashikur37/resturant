@@ -155,4 +155,12 @@ class OrderController extends Controller
         $slider->delete();
         return redirect()->back()->with('successMsg','Successfully Deleted');
     }
+    //status
+    public function status(Request $request,$id)
+    {
+        $slider = Order::find($id);
+        $slider->status = $request->status;
+        $slider->save();
+        return redirect()->back()->with('successMsg','Status Successfully Updated');
+    }
 }

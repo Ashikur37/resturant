@@ -606,9 +606,8 @@ $items=[
             </div>
             <div class="col-xs-6 col-sm-6 dis-table-cell">
                 <div class="section-content">
-                    <p>16th Birn street Get Plaza (4th floar) USA</p>
-                    <p>+44 12 213584</p>
-                    <p>example@mail.com </p>
+                    <p>Narayanganj</p>
+
                 </div>
             </div>
         </div>
@@ -629,7 +628,7 @@ $items=[
 
 <div class="container-fluid">
     <div class="row">
-        <div id="map-canvas"></div>
+        <div id="smap-canvas"></div>
     </div>
 </div>
 

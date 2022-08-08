@@ -21,9 +21,30 @@
                         </div>
                     </div>
                     {{-- go to checkout --}}
-                    <a href="{{route('checkout')}}" class="btn btn-info" style="float:right;margin-right:100px">
+                    {{-- coupon form --}}
+                    <div class="card">
+                        <div class="col-md-7"></div>
+                        <div class="col-md-4">
+                            <div class="card-header card-header-primary">
+                                <h4 class="card-title ">Have Coupon Code</h4>
+                            </div>
+                            <div class="card-content ">
+                                <div class="table-responsive" id="cart-wrap">
+
+
+                                    <form action="{{URL::to('/coupon')}}">
+                                        <input type="text" class="form-control" name="code">
+
+                                   <button class="btn btn-success">Apply</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        @if(count(Cart::content())>0)
+                    <a href="{{route('checkout')}}" class="btn btn-info" style="float:right;margin-right:100px;margin-bottom:100px">
                         Go to chekout
                     </a>
+                    @endif
                 </div>
             </div>
         </div>

@@ -55,6 +55,16 @@
         <tr>
             <td colspan="3"></td>
             <td>Total</td>
+            <th>{{Cart::subtotal()+Cart::discount()}}</th>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td>Discount</td>
+            <th>{{Cart::discount()}}</th>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td>Total</td>
             <th>{{Cart::total()}}</th>
         </tr>
     </tfoot>

@@ -102,7 +102,7 @@
 
                 <a href="{{route('login')}}">Login</a>
                     @elseif(Auth::user()->type==2)
-                    <a href="#">{{auth()->user()->name}}</a>
+                    <a href="{{route('profile')}}">{{auth()->user()->name}}</a>
                     <form id="logout-form" method="post" action="{{route('logout')}}">
                     @csrf
                 </form>
