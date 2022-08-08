@@ -22,6 +22,10 @@
                         <td>{{auth()->user()->email}}</td>
                     </tr>
                     <tr>
+                        <th>Phone</th>
+                        <td>{{auth()->user()->phone}}</td>
+                    </tr>
+                    <tr>
                         <th>Password</th>
                         <td>
                             <a class="btn btn-link" href="#">Change Now</a>
